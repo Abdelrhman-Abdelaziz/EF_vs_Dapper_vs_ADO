@@ -43,7 +43,7 @@ namespace EF_vs_Dapper_vs_ADO.Dapper
 
         public async Task<IEnumerable<Department>?> GetAllAsync()
         {
-            var sql = "SELECT * FROM Employees";
+            var sql = "SELECT * FROM Departments";
 
             using (var connection = new SqlConnection(_connStr))
             {
@@ -67,7 +67,7 @@ namespace EF_vs_Dapper_vs_ADO.Dapper
 
         public async Task<bool> UpdateAsync(Department entity)
         {
-            var sql = "UPDATE Departments SET Name = @Name, BirthDate = @BirthDate, Address = @Address, departmentId = @departmentId WHERE Id = @Id";
+            var sql = "UPDATE Departments SET Name = @Name, Location = @Location WHERE Id = @Id";
 
             using (var connection = new SqlConnection(_connStr))
             {

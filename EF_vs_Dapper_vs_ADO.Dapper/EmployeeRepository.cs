@@ -44,7 +44,7 @@ namespace EF_vs_Dapper_vs_ADO.Dapper
             return await DeleteByIdAsync(entity.Id);
         }
 
-        public async Task<List<Employee>?> GetAllAsync()
+        public async Task<IEnumerable<Employee>?> GetAllAsync()
         {
             var sql = "SELECT * FROM Employees";
 
