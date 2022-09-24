@@ -19,9 +19,12 @@ namespace EF_vs_Dapper_vs_ADO.EF.Repositories
             _db = context.Set<TEntity>();
         }
 
-        public async Task AddAsync(TEntity entity)
+        public async Task<bool> AddAsync(TEntity entity)
         {
+            if (entity == null) return false;
+
             await _db.AddAsync(entity);
+            return true;
         }
 
         public async Task<bool> DeleteAsync(TEntity entity)
@@ -40,7 +43,7 @@ namespace EF_vs_Dapper_vs_ADO.EF.Repositories
             return true;
         }
 
-        public async Task<List<TEntity>?> GetAllAsync()
+        public async Task<IEnumerable<TEntity>?> GetAllAsync()
         {
             return await _db.ToListAsync();
         }
