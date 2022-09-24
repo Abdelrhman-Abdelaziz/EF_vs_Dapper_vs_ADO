@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Web", "EF_vs_Dapper_vs_ADO.Web\EF_vs_Dapper_vs_ADO.Web.csproj", "{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Core", "EF_vs_Dapper_vs_ADO.Core\EF_vs_Dapper_vs_ADO.Core.csproj", "{56865706-FB26-4DC2-8065-563473DE45B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Dapper", "EF_vs_Dapper_vs_ADO.Dapper\EF_vs_Dapper_vs_ADO.Dapper.csproj", "{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.EF", "EF_vs_Dapper_vs_ADO.EF\EF_vs_Dapper_vs_ADO.EF.csproj", "{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.ADO", "EF_vs_Dapper_vs_ADO.ADO\EF_vs_Dapper_vs_ADO.ADO.csproj", "{20329AA3-A26B-41DB-8937-DF09AD76ACF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56865706-FB26-4DC2-8065-563473DE45B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56865706-FB26-4DC2-8065-563473DE45B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56865706-FB26-4DC2-8065-563473DE45B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56865706-FB26-4DC2-8065-563473DE45B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A07A99FC-DE53-4822-BE6D-955DE36326AB}
+	EndGlobalSection
+EndGlobal
