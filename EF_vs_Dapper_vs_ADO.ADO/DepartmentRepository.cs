@@ -10,7 +10,7 @@ namespace EF_vs_Dapper_vs_ADO.ADO
 
         public async Task<bool> AddAsync(Department entity)
         {
-
+            
             var sql = "INSERT INTO Departments (Name,Location) VALUES (@Name,@Location);";
 
             var param = DepartmentToParam(entity);
@@ -20,7 +20,7 @@ namespace EF_vs_Dapper_vs_ADO.ADO
 
         public async Task<bool> DeleteByIdAsync(int id)
         {
-            var sql = $"DELETE FROM Depatments WHERE Id = {id}";
+            var sql = $"DELETE FROM Departments WHERE Id = {id}";
 
             int res = await CommandHelper.ExecuteNonQueryAsync(sql);
             return res > 0;
@@ -35,7 +35,7 @@ namespace EF_vs_Dapper_vs_ADO.ADO
 
         public async Task<IEnumerable<Department>?> GetAllAsync()
         {
-            var sql = "SELECT * FROM Depatments";
+            var sql = "SELECT * FROM Departments";
 
             return DataTableToEmpolyeeList(
                 await CommandHelper.ExecuteDataTableAsync(sql)
@@ -45,10 +45,10 @@ namespace EF_vs_Dapper_vs_ADO.ADO
 
         public async Task<Department?> GetByIdAsync(int id)
         {
-            var sql = $"SELECT * FROM Depatments WHERE Id = {id}";
+            var sql = $"SELECT * FROM Departments WHERE Id = {id}";
 
-            DataRow row = (DataRow)await CommandHelper.ExecuteScalerAsync(sql);
-            return DataRowToDepartment(row);
+            var dataTable = await CommandHelper.ExecuteDataTableAsync(sql);
+            return DataTableToEmpolyeeList(dataTable)?.SingleOrDefault();
         }
 
         public async Task<bool> UpdateAsync(Department entity)
@@ -87,10 +87,9 @@ namespace EF_vs_Dapper_vs_ADO.ADO
         private Dictionary<string, object> DepartmentToParam(Department department)
         {
             if (department == null) return null;
-            {
 
-            }
             var param = new Dictionary<string, object>();
+            param["Id"] = department.Id;
             param["Name"] = department.Name;
             param["Location"] = department.Location;
             return param;

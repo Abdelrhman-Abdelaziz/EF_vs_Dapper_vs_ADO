@@ -52,8 +52,8 @@ namespace EF_vs_Dapper_vs_ADO.ADO
         {
             var sql = $"SELECT * FROM Employees WHERE Id = {id}";
 
-            DataRow row = (DataRow) await CommandHelper.ExecuteScalerAsync(sql);
-            return DataRowToEmployee(row);
+            var dataTable = await CommandHelper.ExecuteDataTableAsync(sql);
+            return DataTableToEmpolyeeList(dataTable)?.SingleOrDefault();
         }
 
         public async Task<bool> UpdateAsync(Employee entity)
@@ -93,6 +93,7 @@ namespace EF_vs_Dapper_vs_ADO.ADO
         private Dictionary<string, object> EmployeeToParam(Employee employee)
         {
             var param = new Dictionary<string, object>();
+            param["Id"] = employee.Id;
             param["Name"] = employee.Name;
             param["BirthDate"] = employee.BirthDate;
             param["Address"] = employee.Address;

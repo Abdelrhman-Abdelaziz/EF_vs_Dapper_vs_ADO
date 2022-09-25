@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EF_vs_Dapper_vs_ADO.ADO;
 using EF_vs_Dapper_vs_ADO.Core;
-using EF_vs_Dapper_vs_ADO.EF.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,12 +7,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EF_vs_Dapper_vs_ADO.Web.Controllers
 {
-    public class EmployeesUsingEFController : Controller
+    public class EmployeesUsingADOController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork; 
-        public EmployeesUsingEFController()
+        private readonly IUnitOfWork _unitOfWork;
+        public EmployeesUsingADOController()
         {
-            _unitOfWork = new UnitOfWork(new EF_vs_Dapper_vs_ADO.EF.AppDBContext());   
+            _unitOfWork = new UnitOfWork();
         }
 
         // GET: EmployeesUsingEF
@@ -59,7 +55,7 @@ namespace EF_vs_Dapper_vs_ADO.Web.Controllers
             if (ModelState.IsValid)
             {
                 await _unitOfWork.Employees.AddAsync(employee);
-                await _unitOfWork.Save();
+                
                 return RedirectToAction(nameof(Index));
             }
             ViewData["departments"] = new SelectList(await _unitOfWork.Departments.GetAllAsync(), "Id", "Name");
@@ -79,7 +75,7 @@ namespace EF_vs_Dapper_vs_ADO.Web.Controllers
             {
                 return NotFound();
             }
-            ViewData["departments"] = new SelectList(await _unitOfWork.Departments.GetAllAsync(), "Id", "Name",employee.Id);
+            ViewData["departments"] = new SelectList(await _unitOfWork.Departments.GetAllAsync(), "Id", "Name", employee.Id);
             return View(employee);
         }
 
@@ -100,7 +96,7 @@ namespace EF_vs_Dapper_vs_ADO.Web.Controllers
                 try
                 {
                     await _unitOfWork.Employees.UpdateAsync(employee);
-                    await _unitOfWork.Save();
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -115,7 +111,7 @@ namespace EF_vs_Dapper_vs_ADO.Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["departments"] = new SelectList(await _unitOfWork.Departments.GetAllAsync(), "Id", "Name",employee.Id);
+            ViewData["departments"] = new SelectList(await _unitOfWork.Departments.GetAllAsync(), "Id", "Name", employee.Id);
             return View(employee);
         }
 
@@ -150,15 +146,15 @@ namespace EF_vs_Dapper_vs_ADO.Web.Controllers
             {
                 return NotFound();
             }
+
+            await _unitOfWork.Employees.DeleteByIdAsync(id);
             
-                await _unitOfWork.Employees.DeleteByIdAsync(id);
-            await _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
 
         private bool EmployeeExists(int id)
         {
-          return _unitOfWork.Employees.GetByIdAsync(id).Result != null;
+            return _unitOfWork.Employees.GetByIdAsync(id).Result != null;
         }
     }
 }

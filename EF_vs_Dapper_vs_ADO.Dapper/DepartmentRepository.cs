@@ -13,7 +13,7 @@ namespace EF_vs_Dapper_vs_ADO.Dapper
 {
     public class DepartmentRepository : IDepartmentRepository
     {
-        public readonly string _connStr = "Server=.;Database=SmallCompany;Trusted_Connection=true";
+        public readonly string _connStr = "Server=.;Database=SmallCompany;Trusted_Connection=true;TrustServerCertificate=True";
         public async Task<bool> AddAsync(Department entity)
         {
             var sql = "INSERT INTO Departments (Name,Location) VALUES (@Name,@Location);";
