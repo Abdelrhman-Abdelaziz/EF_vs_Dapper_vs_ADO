@@ -21,6 +21,9 @@ namespace EF_vs_Dapper_vs_ADO.EF.Repositories
             Employees = new EmployeeRepository(_context);
             Departments = new DepartmentRepository(_context);
         }
-
+        public async Task Save()
+        {
+            await _context.SaveChangesAsync();
+        }
     }
 }

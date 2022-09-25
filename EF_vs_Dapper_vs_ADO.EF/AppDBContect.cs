@@ -13,7 +13,7 @@ namespace EF_vs_Dapper_vs_ADO.EF
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=.;Database=SmallCompany;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer("Server=.;Database=SmallCompany;Trusted_Connection=true;TrustServerCertificate=True");
         }
 
         public virtual DbSet<Employee>? Employees { get; set; }

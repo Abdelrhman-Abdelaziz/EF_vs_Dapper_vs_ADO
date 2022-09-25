@@ -1,7 +1,10 @@
+using EF_vs_Dapper_vs_ADO.EF;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AppDBContext>();
 
 var app = builder.Build();
 

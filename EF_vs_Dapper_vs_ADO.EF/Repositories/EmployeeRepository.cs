@@ -11,9 +11,9 @@ namespace EF_vs_Dapper_vs_ADO.EF.Repositories
 {
     public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
     {
-        private readonly DbContext _context;
+        private readonly AppDBContext _context;
 
-        public EmployeeRepository(DbContext context) : base(context)
+        public EmployeeRepository(AppDBContext context) : base(context)
         {
             _context = context;
         }

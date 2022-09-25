@@ -11,9 +11,9 @@ namespace EF_vs_Dapper_vs_ADO.EF.Repositories
 {
     public class DepartmentRepository : Repository<Department>, IDepartmentRepository
     {
-        private readonly DbContext _context;
+        private readonly AppDBContext _context;
 
-        public DepartmentRepository(DbContext context) : base(context)
+        public DepartmentRepository(AppDBContext context) : base(context)
         {
             _context = context;
         }

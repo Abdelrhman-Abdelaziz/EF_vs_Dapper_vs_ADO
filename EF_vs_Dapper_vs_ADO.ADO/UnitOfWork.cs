@@ -20,5 +20,9 @@ namespace EF_vs_Dapper_vs_ADO.ADO
             Departments = new DepartmentRepository();
         }
 
+        public Task Save()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
