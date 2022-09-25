@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Web", "EF_vs_Dapper_vs_ADO.Web\EF_vs_Dapper_vs_ADO.Web.csproj", "{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.Web", "EF_vs_Dapper_vs_ADO.Web\EF_vs_Dapper_vs_ADO.Web.csproj", "{D48422E6-9884-4CAF-9FE6-F25E0228DDD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Core", "EF_vs_Dapper_vs_ADO.Core\EF_vs_Dapper_vs_ADO.Core.csproj", "{56865706-FB26-4DC2-8065-563473DE45B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.Core", "EF_vs_Dapper_vs_ADO.Core\EF_vs_Dapper_vs_ADO.Core.csproj", "{56865706-FB26-4DC2-8065-563473DE45B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.Dapper", "EF_vs_Dapper_vs_ADO.Dapper\EF_vs_Dapper_vs_ADO.Dapper.csproj", "{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.Dapper", "EF_vs_Dapper_vs_ADO.Dapper\EF_vs_Dapper_vs_ADO.Dapper.csproj", "{DF573C1A-9B0C-4333-B025-7D7E5C28F6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.EF", "EF_vs_Dapper_vs_ADO.EF\EF_vs_Dapper_vs_ADO.EF.csproj", "{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.EF", "EF_vs_Dapper_vs_ADO.EF\EF_vs_Dapper_vs_ADO.EF.csproj", "{981F6FCA-CE9C-48B4-9B22-29DF44D2DF46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.ADO", "EF_vs_Dapper_vs_ADO.ADO\EF_vs_Dapper_vs_ADO.ADO.csproj", "{20329AA3-A26B-41DB-8937-DF09AD76ACF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.ADO", "EF_vs_Dapper_vs_ADO.ADO\EF_vs_Dapper_vs_ADO.ADO.csproj", "{20329AA3-A26B-41DB-8937-DF09AD76ACF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.SeedData", "EF_vs_Dapper_vs_ADO.SeedData\EF_vs_Dapper_vs_ADO.SeedData.csproj", "{A1C5CE51-E59B-427D-8117-F40E12B364CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20329AA3-A26B-41DB-8937-DF09AD76ACF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
