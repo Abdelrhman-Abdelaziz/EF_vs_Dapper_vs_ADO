@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF_vs_Dapper_vs_ADO.ADO", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.SeedData", "EF_vs_Dapper_vs_ADO.SeedData\EF_vs_Dapper_vs_ADO.SeedData.csproj", "{A1C5CE51-E59B-427D-8117-F40E12B364CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_vs_Dapper_vs_ADO.BenchMark", "EF_vs_Dapper_vs_ADO.BeanchMark\EF_vs_Dapper_vs_ADO.BenchMark.csproj", "{165CBB2A-A2AE-4394-B3A8-8749FEEAC1E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C5CE51-E59B-427D-8117-F40E12B364CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165CBB2A-A2AE-4394-B3A8-8749FEEAC1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165CBB2A-A2AE-4394-B3A8-8749FEEAC1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165CBB2A-A2AE-4394-B3A8-8749FEEAC1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165CBB2A-A2AE-4394-B3A8-8749FEEAC1E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

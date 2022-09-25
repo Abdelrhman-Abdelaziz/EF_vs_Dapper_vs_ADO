@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EF_vs_Dapper_vs_ADO.ADO\EF_vs_Dapper_vs_ADO.ADO.csproj" />
+    <ProjectReference Include="..\EF_vs_Dapper_vs_ADO.Core\EF_vs_Dapper_vs_ADO.Core.csproj" />
+    <ProjectReference Include="..\EF_vs_Dapper_vs_ADO.Dapper\EF_vs_Dapper_vs_ADO.Dapper.csproj" />
+    <ProjectReference Include="..\EF_vs_Dapper_vs_ADO.EF\EF_vs_Dapper_vs_ADO.EF.csproj" />
+  </ItemGroup>
+
+</Project>
